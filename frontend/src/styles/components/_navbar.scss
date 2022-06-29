@@ -1,0 +1,44 @@
+@use "../abstracts" as *;
+
+.navbar {
+  // padding: 0.5rem;
+  background-color: rgb(170, 255, 0);
+}
+
+.navbarNav {
+  padding: 0rem;
+  // background-color: blue;
+}
+
+.navbarListItems {
+  padding: 0.5rem;
+  // background-color: rgb(255, 0, 0);
+}
+
+.navbarListItem {
+  padding: 0.5rem;
+  // background-color: rgb(244, 160, 244);
+}
+
+.navbarListItemName {
+  color: rgb(255, 247, 0);
+}
+
+.navbarListItemNameActive {
+  padding: 0.5rem;
+  background-color: rgb(198, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.primary-header {
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(235, 251, 170);
+}
+
+.primary-navigation {
+  padding: 0;
+  margin: 0;
+  background-color: rgba(230, 230, 230, 0.975);
+  list-style: none;
+}
