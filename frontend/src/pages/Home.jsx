@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import axios from 'axios';
 // components
 import WorkoutDetails from '../components/WorkoutDetails';
 import WorkoutForm from '../components/WorkoutForm';
+import { useWorkoutsContext } from '../hooks/useWorkoutsContext';
 
 const Home = () => {
-  const [workouts, setWorkouts] = useState(null);
+  const { workouts, dispatch } = useWorkoutsContext();
 
   console.log(workouts, 'workouts');
   useEffect(() => {
@@ -17,7 +18,7 @@ const Home = () => {
 
         console.log(JSON.stringify(data, null, 4));
         console.log('response status is: ', status);
-        setWorkouts(data);
+        dispatch({ type: 'SET_WORKOUTS', payload: data });
       } catch (error) {
         if (axios.isAxiosError(error)) {
           console.log('error message: ', error.message);

@@ -36,13 +36,15 @@ function App() {
     <div className="App">
       <Router>
         <Navigation />
-        <Routes>
-          <Route index element={<Home />} />
-          <Route path="/about" element={<AboutPage />} />
+        <div className="pages">
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<AboutPage />} />
 
-          <Route path="/notfound" element={<NotFoundPage />} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
+            <Route path="/notfound" element={<NotFoundPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Routes>
+        </div>
       </Router>
     </div>
   );
